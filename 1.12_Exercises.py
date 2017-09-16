@@ -126,6 +126,70 @@ def my_choice(data):
 list = [1,2,3,4,5,6,7,8,9,10]
 print(list[-1])
 
+# C-1.14
+# Write a short Python function that takes a sequence of integer values and determines
+# if there is a distinct pair of numbers in the sequence whose product is odd.
+
+def odd_product(data):
+    count = 0
+    for k in range(0, len(data) - 1):
+        if k % 2 != 0:
+            count += 1
+        return True if count >= 2 else False
+
+
+# C-1.15
+# Write a Python function that takes a sequence of numbers and determines
+# if all the numbers are different from each other (that is, they are distinct).
+
+def are_identical(data):
+    count = 0
+    for k in data:
+        for k in range(0, len(data) -1):
+            if k == j:
+                count += 1
+                if count >= 2:
+                    return False
+    return True
+
+# C-1.18
+# Demo list comprehension to create the following
+# list [0, 2, 6, 12, 20, 30, 42, 56, 72, 90].
+
+print ([k * (k-1) for k in range(1,11)])
+
+# C-1.19
+# Demonstrate how to use python's
+# list comprehension syntax to produce
+# the list [ a , b , c ,..., z ],without typing  characters literally.
+
+print ([chr(k) for k in range(97,123)])
+
+# C-1.23
+# Give an example of a Python code fragment that attempts
+# to write an ele- ment to a list based on an index that may be out of bounds.
+# If that index is out of bounds, the program should
+# catch the exception that results, and print the following error message:
+# “Don’t try buffer overflow attacks in Python!”
+
+listoch = [1,2,3,4,5]
+
+try:
+    listoch[5]
+except IndexError:
+    print("bad index")
+
+# C-1.24
+# Write a short Python function that counts the number of vowels in a given
+# character string.
+
+sentence = "The Quick brown Fox jumps over the lazy dog."
+count = 0
+
+for c in sentence:
+    if c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u':
+        count += 1
+print count
 
 
 
